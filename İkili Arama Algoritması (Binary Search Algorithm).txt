@@ -1,0 +1,24 @@
+Yazan : Şadi Evren ŞEKER
+
+Bilgisayar bilimlerinde bir bilgi kaynağı veya veri yapısı üzerinde problemi her adımda iki parçaya bölerek yapılan arama algoritmasının ismidir. Bu anlamda bazı kaynaklarda bölerek arama olarak da geçmektedir.
+
+Arama algoritması, yapı olarak parçala fethet (divide and conquere) yaklaşımının bir uygulamasıdır.
+
+Bu yazı kapsamında diziler üzerinde ikili arama işleminin nasıl yapıldığı anlatılacaktır. Ancak algoritma, diziler dışında çok farklı veri yapıları ve veri kaynakları için de kullanılabilir. Algoritmanın her durumda çalışması aşağıdaki şekildedir.
+
+Problemde aranacak uzayın tam orta noktasına bak
+Şayet aranan değer bulunduysa bit
+Şayet bakılan değer aranan değerden büyükse arama işlemini problem uzayının küçük elamanlarında devam ettir.
+Şayet bakılan değer arana değerden küçükse arama işlemini problem uzayının büyük elemanlarında devam ettir.
+Şayet bakılan aralık 1 veya daha küçükse aranan değer bulunamadı olarak bitir.
+Yukarıdaki müsvedde kod (pseudo code) ele alındığında problem her seferinde aranan sayıya göre ortadan ikiye bölünmektedir. Bu anlamda problemin log2(n) adımda çözülmesi beklenir. Burada logaritmik fonksiyonların üssel fonksiyonların tersi olduğu ve her adımda problemi iki parçaya böldüğümüzü hatırlayınız.
+
+Arama algoritmasının bir dizi üzerinde başarılı çalışması için dizinin sıralı olması gerekir. Yukarıdaki koddan anlaşılacağı üzere ortadaki elemana bakıldığında, aranan sayı ya bakılan sayıdan büyük ya da küçüktür. Dolayısıyla algoritmamız, ya bakılan sayıdan küçük olan sayılar arasında arama yapacak ya da büyük olan sayılar arasında arama yapacaktır.
+
+Bu durumu örnek bir dizi (array) üzerinden açıklamaya çalışalım. Örneğin dizimiz aşağıdaki şekilde verilmiş olsun:
+
+int a[10]={2,3,5,6,9,12,32,54,74,111};
+
+Bu dizi üzerinde 10 eleman bulunduğuna göre aranan sayı her ne olursa olsun ilk bakılacak değer ortadaki değer olan (5. Değer) 12 sayısıdır.
+
+Yazının devamı için : https://bilgisayarkavramlari.com/2009/12/21/ikili-arama-algoritmasi-binary-search-algorithm/
